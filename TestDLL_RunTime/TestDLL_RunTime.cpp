@@ -14,8 +14,8 @@ int main()
     HELLO hello;
     // 加载DLL,注意是以exe所在目录为当前目录，写dll的相对路径,也可写绝对路径,注意路径分隔符格式
     // 必须使用_T进行转换，不能使用LPCWSTR强制转换
-    //hDLL = LoadLibrary(_T("MyDll.dll"));
-    hDLL = LoadLibrary(_T("C:\\Users\\33658\\Desktop\\TestDLL_RunTime\\Debug\\MyDll.dll"));
+    hDLL = LoadLibrary(_T("MyDll.dll"));
+    //hDLL = LoadLibrary(_T("C:\\Users\\33658\\Desktop\\TestDLL_RunTime\\Debug\\MyDll.dll"));
     if (hDLL != NULL) {
         // 传入DLL句柄，获得MyAdd函数的地址，然后强转为lpMyAdd类型
         hello = (HELLO)GetProcAddress(hDLL, "hello");
